@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Details List</title>
+</head>
+<body>
+    <h2>Pricing Details List</h2>
+    <ul>
+        {% for pricingdetails in pricingdetail %}
+        <li><a href="{% url 'pricingdetails_detail'pricingdetails.pk %}">{{pricingdetails.cost_price}} {{pricingdetails.selling_price}}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

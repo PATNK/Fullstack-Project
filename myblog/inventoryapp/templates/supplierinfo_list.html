@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supplier Information List</title>
+</head>
+<body>
+    <h2>Supplier Information List</h2>
+    <ul>
+        {% for supplierinfo in supplierinfos %}
+        <li><a href="{% url 'supplierinfo_detail' supplierinfo.pk %}">{{supplierinfo.supplier_id}}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

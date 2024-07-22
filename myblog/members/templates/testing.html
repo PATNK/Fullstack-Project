@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>My first html template</h2>
+    <p>My first name is {{firstname}}</p>
+    <p>My last name is {{lastname}}</p>
+    <p>My last name is {{gender}}</p>
+    <p>My last name is {{address}}</p>
+    
+    <h1>Employee Details</h1>
+    <ul>
+        {% for x in student %}
+        <li>{{x.Firstname}} {{x.Lastname}}</li>
+        <li>{{x.Firstname}} {{x.Lastname}} {{x.Age}} {{x.Gender}} {{x.Matric_Number}} {{x.Class}} {{x.Address}} {{x.EmailAddress}}</li>
+        <li>{{x.Firstname}} {{x.Designation}} {{x.Employment_date}} {{x.Age}} {{x.Gender}} {{x.Next_of_Kin}} {{x.Salary}}</li>
+        {% endfor %}
+    </ul>
+
+    <ul>
+        {% for x in employees %}
+        <li>{{x.Firstname}} {{x.Designation}} {{x.Employment_date}} {{x.Age}} {{x.Gender}} {{x.Next_of_Kin}} {{x.Salary}}</li>
+        {% endfor %}
+    </ul>
+
+
+    
+</body>
+</html>

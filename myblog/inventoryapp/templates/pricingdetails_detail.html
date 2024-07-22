@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Details</title>
+</head>
+<body>
+    <h2>Pricing Details</h2>
+    <p>Cost Price: {{pricingdetails.cost_price}}</p>
+    <p>Selling Price: {{pricingdetails.selling_price}}</p>
+    <p>Discounts: {{pricingdetails.discounts}}</p>
+    <a href="{ url 'pricingdetails_update' pricingdetails.pk}">Update PricingDetails Info</a>
+    <form action="{% url 'pricingdetails_delete' pricingdetails.pk %}" method="post">
+        {% csrf_token %}
+        <button type="submit">Delete</button>
+</body>
+</html>

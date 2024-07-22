@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Pricing Details</title>
+</head>
+<body>
+    <h2>Delete Pricing Details</h2>
+    <p>Are you sure you want to delete "{{ pricingdetails.cost_price}} {{pricingdetails.selling_price}}"?</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Yes, Delete User's Information</button>
+    </form>
+</body>
+</html>

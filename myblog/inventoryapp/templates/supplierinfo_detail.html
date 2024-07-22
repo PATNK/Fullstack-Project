@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supplier Information Details</title>
+</head>
+<body>
+    <h2>Supplier Information Details</h2>
+    <p>Supplier ID: {{supplierinfo.supplier_id}}</p>
+    <p>Supplier Name: {{supplierinfo.supplier_name}}</p>
+    <p>Contact Information: {{supplierinfo.contact_info}}</p>
+    <p>Payment Terms: {{supplierinfo.payment_terms}}</p>
+    <p>Delivery Terms: {{supplierinfo.delivery_terms}}</p>
+    <p>Supplier Rating: {{supplierinfo.supplier_rating}}</p>
+        <a href="{ url 'supplierinfo_update' supplierinfo.pk}">Update SupplierInfo Info</a>
+    <form action="{% url 'supplierinfo_delete' suppliernfo.pk %}" method="post">
+        {% csrf_token %}
+        <button type="submit">Delete</button>
+
+</body>
+</html>

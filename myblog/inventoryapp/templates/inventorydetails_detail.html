@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Details</title>
+</head>
+<body>
+    <h2>Inventory Details</h2>
+    <p>Quantity in Stock: {{inventorydetails.quantity_in_stock}}</p>
+    <p>Recorder Level: {{inventorydetails.recorder_level}}</p>
+    <p>Reorder Quantity: {{inventorydetails.reorder_quantity}}</p>
+    <p>Safety Stock Level: {{inventorydetails.safety_stock_level}}</p>
+    <p>Lead Time: {{inventorydetails.leadtime}}</p>
+    <p>Storage Location: {{inventorydetails.storage_location}}</p>
+    <p>Batch Number: {{inventorydetails.batch_number}}</p>
+    <p>Expiry Date: {{inventorydetails.expiry_date}}</p>
+    <a href="{ url 'inventorydetails_update' inventorydetails.pk}">Update InventoryDetails Info</a>
+    <form action="{% url 'inventorydetails_delete' inventorydetails.pk %}" method="post">
+        {% csrf_token %}
+        <button type="submit">Delete</button>
+</body>
+</html>

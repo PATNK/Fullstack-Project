@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Student Details</h1>
+    <ul>
+        {% for x in students %}
+        <li>{{x.Firstname}} {{x.Designation}} {{x.Employment_date}} {{x.Age}} {{x.Gender}} {{x.Next_of_Kin}} {{x.SAddress}} {{x.EmailAddress}}</li>
+        
+        {% endfor %}
+    </ul>
+</body>
+</html>

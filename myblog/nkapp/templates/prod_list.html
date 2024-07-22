@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prod List</title>
+</head>
+<body>
+    <h2>Prod List</h2>
+    <ul>
+        {% for prod in prods %}
+        <li><a href="{% url 'prod_detail' prod.pk %}">{{prod.prodname}}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

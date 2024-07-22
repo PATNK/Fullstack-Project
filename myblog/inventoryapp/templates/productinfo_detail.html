@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Information Details</title>
+</head>
+<body>
+    <h2>Product Information Details</h2>
+    <p>Product ID: {{productinfo.product_id}}</p>
+    <p>Product Name: {{productinfo.product_name}}</p>
+    <p>Description: {{productinfo.description}}</p>
+    <p>Category: {{productinfo.category}}</p>
+    <p>Sub-Category: {{productinfo.sub_category}}</p>
+    <p>SKU: {{productinfo.sku}}</p>
+    <p>UPC: {{productinfo.upc}}</p>
+    <p>Manufacturer: {{productinfo.manufacturer}}</p>
+    <p>Brand: {{productinfo.brand}}</p>
+    <p>Model Number: {{productinfo.model_number}}</p>
+    <a href="{% url 'productinfo_update' productinfo.pk %}">Update ProductInfo Info</a>
+    
+    <form action="{% url 'productinfo_delete' productinfo.pk %}" method="post">
+        {% csrf_token %}
+        <button type="submit">Delete</button>
+
+</body>
+</html>

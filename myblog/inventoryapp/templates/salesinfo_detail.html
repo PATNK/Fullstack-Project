@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Information Details</title>
+</head>
+<body>
+    <h2>Sales Information Details</h2>
+    <p>Sales ID: {{salesinfo.salesorder_id}}</p>
+    <p>Customer ID: {{salesinfo.customer_id}}</p>
+    <p>Order Date: {{salesinfo.order_date}}</p>
+    <p>Delivery Date: {{salesinfo.delivery_date}}</p>
+    <p>Order Quantity: {{salesinfo.order_quantity}}</p>
+    <p>Sales Channel: {{salesinfo.sales_channel}}</p>
+    <a href="{ url 'salesinfo_update' salestinfo.pk}">Update SalesInfo Info</a>
+    <form action="{% url 'productinfo_delete' productinfo.pk %}" method="post">
+        {% csrf_token %}
+        <button type="submit">Delete</button>
+
+</body>
+</html>
